@@ -23,16 +23,19 @@
           <div class="screen-body-item">
             <div class="app-form">
               <div class="app-form-group">
-                <input class="app-form-control" placeholder="NOME" value="Digite Seu nome">
+                <input [(ngModel)]='usuario.nome' class="app-form-control" placeholder="NOME" value="Digite Seu nome">
               </div>
               <div class="app-form-group">
-                <input class="app-form-control" placeholder="Digite seu Email">
+                <input  [(ngModel)]='usuario.Email' class="app-form-control" placeholder="Digite seu Email">
               </div>
               <div class="app-form-group">
-                <input class="app-form-control" placeholder="Link da Foto">
+                <input [(ngModel)]='usuario.Foto' class="app-form-control" placeholder="Link da Foto">
               </div>
               <div class="app-form-group message">
-                <input class="app-form-control" placeholder="Digite sua Senha">
+                <input (input)='confirmSenha($event)' class="app-form-control" placeholder="Digite sua Senha">
+              </div>
+              <div class="app-form-group message">
+                <input [(ngModel)]='usuario.senha' placeholder="Confirme sua senha">
               </div>
               <div class="app-form-group buttons">
                 <button class="app-form-button" routerLink='/logar'>Cancelar</button>
